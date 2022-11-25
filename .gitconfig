@@ -1,0 +1,7 @@
+[user]
+	email = glyn.normington@gmail.com
+	name = Glyn Normington
+[alias]
+	st = status
+[core]
+	editor = emacs
