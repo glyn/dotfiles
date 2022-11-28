@@ -22,3 +22,6 @@
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+
+;; Save all open buffers when emacs loses focus.
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
