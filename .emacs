@@ -25,3 +25,6 @@
 
 ;; Save all open buffers when emacs loses focus.
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+
+;; replace highlighted text with what I type
+(delete-selection-mode 1)
