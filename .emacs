@@ -7,7 +7,9 @@
  '(custom-safe-themes
    '("fe1c13d75398b1c8fd7fdd1241a55c286b86c3e4ce513c4292d01383de152cb7" default))
  '(inhibit-startup-screen t)
- '(package-selected-packages '(markdown-mode ## dracula-theme))
+ '(lsp-haskell-server-path "haskell-language-server")
+ '(package-selected-packages
+   '(editorconfig haskell-mode lsp-haskell lsp-ui lsp-mode markdown-mode dracula-theme))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -28,3 +30,9 @@
 
 ;; replace highlighted text with what I type
 (delete-selection-mode 1)
+
+(require 'lsp)
+(require 'lsp-haskell)
+;; Hooks so haskell and literate haskell major modes trigger LSP setup
+(add-hook 'haskell-mode-hook #'lsp)
+(add-hook 'haskell-literate-mode-hook #'lsp)
