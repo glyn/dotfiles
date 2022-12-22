@@ -32,7 +32,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-setxkbmap -layout gb
+# The following is equivalent to `setxkbmap -layout gb`, but persists across suspend/resume
+Option "XkbLayout" "gb"
 
 #twm &
 #xterm -geometry 80x20+494-0 &
