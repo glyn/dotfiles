@@ -5,3 +5,5 @@
 	st = status
 [core]
 	editor = emacs
+[pull]
+	rebase = false
