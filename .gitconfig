@@ -4,7 +4,8 @@
 [alias]
 	st = status
 [core]
-	editor = emacs
+	editor = code --wait
+	excludesfile = /home/glyn/.gitignore_global
 [pull]
 	rebase = false
 [init]
