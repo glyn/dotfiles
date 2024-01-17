@@ -8,7 +8,8 @@ main = do
 
    xmonad $ docks $ def
      { layoutHook = avoidStruts $ layoutHook def
-     , terminal = "xterm -e /bin/zsh"
+     -- , terminal = "xterm -e /bin/zsh"
+     , terminal = "alacritty"
      , modMask  = mod4Mask
      , borderWidth = 3
      }
